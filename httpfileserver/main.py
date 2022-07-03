@@ -73,10 +73,10 @@ async def upload_file(file: UploadFile):
 
 @app.put("/files/{file_name}", status_code=status.HTTP_202_ACCEPTED)
 async def replace_file(file_name, file: UploadFile):
-    file = Path(ROOT) / file_name
-    if not file.exists():
+    file_to_replace = Path(ROOT) / file_name
+    if not file_to_replace.exists():
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'{file} does not exist')
     else:
-        content = file.read_bytes()
-        file.write_bytes(content)
+        content = await file.read()
+        file_to_replace.write_bytes(content)
         return {"filename": str(file)}
