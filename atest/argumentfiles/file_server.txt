@@ -1,0 +1,14 @@
+--include file_server
+--exclude skip
+--console verbose
+--outputdir ./reports
+--output output-local.xml
+--xunit xunit-local.xml
+--debugfile debug-local.txt
+--report report-local.html
+--log log-local.html
+--loglevel TRACE:INFO
+--splitlog
+--pythonpath ./libraries
+--variablefile ./variables/variables.py
+./suites
