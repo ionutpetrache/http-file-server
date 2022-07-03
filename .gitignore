@@ -129,7 +129,11 @@ dmypy.json
 .pyre/
 
 # robot framework
-reports/
+atest/reports/
+atest/data/
 
 # .idea
 .idea/
+
+# http-file-server project
+files/
