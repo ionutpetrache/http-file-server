@@ -1,2 +1,2 @@
 # http-file-server
-HTTP file server using FastAPI - testing purpose only
+Only for test purpose - no production ready - HTTP file server using FastAPI

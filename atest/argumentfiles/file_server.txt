@@ -11,4 +11,3 @@
 --splitlog
 --pythonpath ./libraries
 --variablefile ./variables/variables.py
-./suites
